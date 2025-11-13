@@ -1,4 +1,4 @@
-<? 
+<?
 /*
 //Exercice 1 
 //-Créer une variable de type int avec pour valeur 5,
@@ -121,10 +121,19 @@ echo "<p>$a - $b = $resultat</p>";
 
 echo'<p> Exercice 8  </p>';
 //Créer une fonction qui prend en entrée un nombre à virgule (float),,
-function test(float) {
-
+function arrondi($chiffre) {
+    return round($chiffre);
 }
+
+echo arrondi(1.64736473);
 //la fonction doit renvoyer l’arrondi (return) du nombre en entrée.
+echo'<p> Exercice 9  </p>';
+//Créer une fonction qui prend en entrée 3 valeurs et renvoie la somme des 3 valeurs.
+
+function somme($chiffre1, $chiffre2, $chiffre3) {
+    return $chiffre1 + $chiffre2 + $chiffre3;
+}
+echo somme(1, 2, 3);
 
 ?>
 
