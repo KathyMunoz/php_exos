@@ -135,6 +135,144 @@ function somme($chiffre1, $chiffre2, $chiffre3) {
 }
 echo somme(1, 2, 3);
 
+echo'<p> Exercice 10  </p>';
+//-Créer une fonction qui teste si un nombre est positif ou négatif (echo dans la page web).
+function test($nombre) {
+    if ($nombre >= 0) {
+        echo'<p>Le nombre est positif</p>';
+    } else {
+        echo'<p>Le nombre est négatif</p>';
+    } 
+}
+
+echo '<p>' .test(2). '</p>';
+echo test(-1);
+
+
+echo'<p> Exercice 11  </p>';
+
+//-Créer une fonction qui prend en entrée 3 valeurs et retourne le nombre le plus grand (echo dans la page web).
+
+function plusGrandvaleur ($x, $y, $z){
+    return max ($x, $y, $z);
+} 
+echo '<p>' .plusGrandvaleur(2, 8, 1). '</p>';
+
+echo'<p> Exercice 12  </p>';
+
+function plusPetitvaleur ($num1, $num2, $num3){
+    return min ($num1, $num2, $num3);
+} 
+echo '<p>' .plusPetitvaleur(2, 8, 1). '</p>';
+
+echo'<p> Exercice 13  </p>';
+/*-Créer une fonction qui prend en entrée 1 valeur (l’âge d’un enfant). Ensuite, elle informe de sa catégorie (echo dans
+la page web) :
+x "Poussin" de 6 à 7 ans
+x "Pupille" de 8 à 9 ans
+x "Minime" de 10 à 11 ans
+x "Cadet" après 12 ans*/
+
+function category ($valeur) {
+    if ($valeur >= 6 && $valeur <= 7) {
+        echo '<p>"Poussin"</p>';
+    } else if ($valeur >= 8 && $valeur <= 9) {
+        echo '<p>"Pupille"</p>';
+    } else if($valeur >= 10 && $valeur <= 11) {
+        echo '<p>"Minime"</p>';
+    } else if($valeur >= 12) {
+        echo '<p>"Cadet"</p>';
+    } else{
+        echo '<p> "Hors catégorie" </p>';
+    }
+}
+
+echo '<p>' .category(6). '</p>';
+echo '<p>' .category(8). '</p>';
+echo '<p>' .category(10). '</p>';
+echo '<p>' .category(14). '</p>';
+echo '<p>' .category(5). '</p>';
+
+echo'<p> Exercice 14  </p>';
+
+//Refaire l’exercice 13 en utilisant le switch case.
+
+function categorySwitch ($valeur) {
+    Switch($valeur) {
+        case 6 :
+            //si je mets un break là, ça va s'arrter là
+        case 7 :
+           echo '<p>"Poussin"</p>';
+           break;
+        case 8 :
+        case 9 :
+            echo '<p>"Pupille"</p>';
+            break;
+        case 10 :
+        case 11 :
+            echo '<p>"Minime"</p>';
+            break;
+        case 12 :     
+            echo '<p>"Cadet"</p>';
+            break;
+        default :
+            echo '<p> "Hors catégorie" </p>';
+            break;
+
+    }
+}
+
+echo '<p>' .category(6). '</p>';
+echo '<p>' .category(8). '</p>';
+echo '<p>' .category(10). '</p>';
+echo '<p>' .category(14). '</p>';
+echo '<p>' .category(5). '</p>';
+
+echo'<p> Exercice 15  </p>';
+//Créer une fonction qui affiche la valeur la plus grande du tableau.
+function displayGrand ($tab) {
+    $max = $tab[0];
+     for ( $i = 0 ; $i < count($tab) ; $i++ ) {
+        if ($max < $tab[$i]) {
+            $max = $tab[$i];//on met à jour $max pour qu'il prenne cette nouvelle valeur plus grande
+        }
+    }
+    return $max;
+}
+echo displayGrand(([1,19,2,3,4]));
+
+echo'<p> Exercice 16  </p>';
+//Créer une fonction qui affiche la moyenne du tableau.
+function moyenne ($tab) {
+        $moyenne = 0; //on initialise
+        for ($i=0 ; $i < count($tab) ; $i++) {
+            $moyenne += $tab[$i];//on reincremente moyenne de tab et on l'asigne à moyenne
+        }
+        return $moyenne / count($tab);
+}
+echo moyenne([1, 2, 3]);
+
+echo'<p> Exercice 17  </p>';
+//Créer une fonction qui affiche la valeur la plus petite du tableau.
+function displayPetit ($tab) {
+    $min = $tab[0];
+     for ( $i = 0 ; $i < count($tab) ; $i++ ) {
+        if ($min > $tab[$i]) {
+            $min = $tab[$i];//on met à jour $max pour qu'il prenne cette nouvelle valeur plus grande
+        }
+    }
+    return $min;
+}
+echo displayPetit(([1,19,2,3,4]));
+
+echo'<p> Exercice 18  </p>';
+echo'<p> Exercice 19  </p>';
+
+
+
+
+
+
 ?>
 
 
